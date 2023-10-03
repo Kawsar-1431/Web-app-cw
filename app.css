@@ -1,12 +1,9 @@
 #main {
     display: flex
-    
 }
+
 #search {
     text-align: center
-    
-    
-    
 }
 
 #box1 {
@@ -122,3 +119,6 @@
 #sort6 {
     margin-bottom: 10px;
 }
+
+     
+

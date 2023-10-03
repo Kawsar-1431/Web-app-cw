@@ -70,7 +70,6 @@ new Vue({
       "Music",
       "Sculpture",
       "Chemistry",
-      "Chemistry",
       "Biology",
       "French",
       "Cooking",
