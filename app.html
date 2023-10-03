@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book store</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
+
+
+</head>
+
+<body>
+    <div id="search">
+    <input type="text" id="search" name="search" >
+    <button type="submit">Search</button>
+    </div>
+
+    
+    
+        
+        
+    
+    <div id="main">
+       
+    
+
+
+
+
+        <div id="box1"> {{contents}}
+            <button v-on:click="subject1">Add to cart</button>
+        </div>
+        <div id="box2"> {{contents}}
+            <button v-on:click="subject2">Add to cart</button>
+        </div>
+        <div id="box3"> {{contents}}
+            <button v-on:click="subject3">Add to cart</button>
+        </div>
+        <div id="box4"> {{contents}}
+            <button v-on:click="subject4">Add to cart</button>
+        </div>
+        <div id="box5"> {{contents}}
+            <button v-on:click="subject5">Add to cart</button>
+        </div>
+        <div id="box6"> {{contents}}
+            <button v-on:click="subject6">Add to cart</button>
+        </div>
+        <div id="box7"> {{contents}}
+            <button v-on:click="subject7">Add to cart</button>
+        </div>
+        <div id="box8"> {{contents}}
+            <button v-on:click="subject8">Add to cart</button>
+        </div>
+        <div id="box9"> {{contents}}
+            <button v-on:click="subject9">Add to cart</button>
+        </div>
+        <div id="box10"> {{contents}}
+            <button v-on:click="subject10">Add to cart</button>
+        </div>
+
+
+    </div>
+    <h4> Sort by</h4>
+    <div id="sort1"><button v-on:click="sortNames">Subject</button>
+        <ul>
+            <li v-for="name in sortedNames" :key="name">{{ name }}</li>
+        </ul>
+    </div>
+    <div id="sort2"><button v-on:click="location">Location</button></div>
+    <div id="sort3"><button v-on:click="sortNumbers">Price</button>
+        <ul>
+            <li v-for="number in sortedNumbers" :key="number">{{ number }}</li>
+        </ul>
+    </div>
+    <div id="sort4"><button v-on:click="availability">Availability</button></div>
+    <div id="sort5"><button v-on:click="order1">Ascending</button></div>
+    <div id="sort6"><button v-on:click="order2">Descending</button></div>
+
+
+    <script src="app.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
