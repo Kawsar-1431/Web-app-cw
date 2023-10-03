@@ -75,7 +75,15 @@
     </div>
     <div id="sort5"><button v-on:click="order1">Ascending</button></div>
     <div id="sort6"><button v-on:click="order2">Descending</button></div>
+    <div id="app2">
+      <button @click="toggleLessons">Lessons</button>
+      <ul v-if="showingLessons">
+          <li v-for="lesson in lessons">{{ lesson.lesson }}</li>
+      </ul>
+  </div>
 
     <script src="app.js"></script>
+    <script src="lessons.js"></script>
+
   </body>
 </html>
