@@ -59,78 +59,16 @@ new Vue({
     contents: "Subject:Cooking Location:London Price:$66 Spaces:5",
   },
 });
-new Vue({
-  el: "#sort1",
-  data: {
-    names: [
-      "Math",
-      "English",
-      "Bengali",
-      "Physics",
-      "Music",
-      "Sculpture",
-      "Chemistry",
-      "Biology",
-      "French",
-      "Cooking",
-    ],
-    ascendingNames: true,
-    showNames: false,
-    sortingBy: "", // Add a property to keep track of sorting
-  },
-  computed: {
-    sortedNames() {
-      const sorted = [...this.names];
-      if (this.ascendingNames) {
-        sorted.sort((a, b) => a.localeCompare(b));
-      } else {
-        sorted.sort((a, b) => b.localeCompare(a));
-      }
-      return sorted;
-    },
-  },
-  methods: {
-    toggleNames() {
-      this.showNames = !this.showNames;
-      this.sortingBy = "names"; // Update sorting property
-    },
-  },
-});
 
 new Vue({
-  el: "#sort3",
-  data: {
-    numbers: [100, 80, 70, 60, 98, 65, 97, 77, 87, 66],
-    ascendingNumbers: true,
-    showNumbers: false,
-  },
-  computed: {
-    sortedNumbers() {
-      const sorted = [...this.numbers];
-      if (this.ascendingNumbers) {
-        sorted.sort((a, b) => a - b);
-      } else {
-        sorted.sort((a, b) => b - a);
-      }
-      return sorted;
-    },
-  },
-  methods: {
-    toggleNumbers() {
-      this.showNumbers = !this.showNumbers;
-      this.sortingBy = "numbers"; // Update sorting property
-    },
-  },
-});
-new Vue({
-  el: "#sort5",
+  el: "#sort1",
   methods: {
     order1() {
       const mainDiv = document.getElementById("main");
       const boxElements = Array.from(mainDiv.children);
-      
+
       // Extract subject names and corresponding box elements
-      const subjectsAndBoxes = boxElements.map(boxElement => {
+      const subjectsAndBoxes = boxElements.map((boxElement) => {
         const contents = boxElement.textContent;
         const subjectMatch = contents.match(/Subject:(.*?)Location:/);
         return {
@@ -146,19 +84,19 @@ new Vue({
       mainDiv.innerHTML = "";
 
       // Append the sorted box elements back to the main div
-      subjectsAndBoxes.forEach(item => mainDiv.appendChild(item.box));
+      subjectsAndBoxes.forEach((item) => mainDiv.appendChild(item.box));
     },
   },
 });
 new Vue({
-  el: "#sort6",
+  el: "#sort2",
   methods: {
     order2() {
       const mainDiv = document.getElementById("main");
       const boxElements = Array.from(mainDiv.children);
 
       // Extract subject names and corresponding box elements
-      const subjectsAndBoxes = boxElements.map(boxElement => {
+      const subjectsAndBoxes = boxElements.map((boxElement) => {
         const contents = boxElement.textContent;
         const subjectMatch = contents.match(/Subject:(.*?)Location:/);
         return {
@@ -174,8 +112,7 @@ new Vue({
       mainDiv.innerHTML = "";
 
       // Append the sorted box elements back to the main div
-      subjectsAndBoxes.forEach(item => mainDiv.appendChild(item.box));
+      subjectsAndBoxes.forEach((item) => mainDiv.appendChild(item.box));
     },
   },
 });
-

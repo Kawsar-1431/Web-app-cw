@@ -57,31 +57,14 @@
       <button v-on:click="subject10">Add to cart</button>
     </div>
   </div>
-  <h4>Sort by</h4>
-  <div id="sort1">
-    <div class="lessons-container">
-      <button v-on:click="toggleNames">Subjects</button>
-      <ul class="lessons-list" v-if="showNames">
-        <li v-for="name in sortedNames" class="lesson-item" :key="name">{{ name }}</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="sort2"><button v-on:click="location">Location</button></div>
-  <div id="sort3">
-    <div class="lessons-container">
-      <button v-on:click="toggleNumbers">Price</button>
-      <ul class="lessons-list" v-if="showNumbers">
-        <li v-for="number in sortedNumbers" class="lesson-item" :key="number">{{ number }}</li>
-      </ul>
-    </div>
-  </div>
+  <h2>Sort by</h2>
+  <h3>Subjects</h3>
+  <h3>Location</h3>
+  <h3>Price</h3>
+  <h3>Availability</h3>
   
-  <div id="sort4">
-    <button v-on:click="availability">Availability</button>
-  </div>
-  <div id="sort5"><button v-on:click="order1">Ascending</button></div>
-  <div id="sort6"><button v-on:click="order2">Descending</button></div><br><br>
+  <div id="sort1"><button v-on:click="order1">Ascending</button></div>
+  <div id="sort2"><button v-on:click="order2">Descending</button></div><br><br>
   <div id="app2">
     <div class="lessons-container">
       <button v-on:click="toggleLessons">Lessons</button>
@@ -99,4 +82,3 @@
 </body>
 
 </html>
-
