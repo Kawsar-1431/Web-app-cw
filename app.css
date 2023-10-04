@@ -138,5 +138,23 @@
   button {
     margin-right: 10px; /* Adjust the margin as needed */
   }
+  .subject-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
   
+  /* Remove margin from the Subject tag and buttons */
+  /* Add a specific class to the sorting buttons container */
+.sorting-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Add some space between Subject and buttons */
+  }
+  
+  /* Adjust spacing as needed */
+  .sorting-buttons button {
+    margin: 0;
+    margin-left: 5px; /* Add space between the buttons */
+  }
   
