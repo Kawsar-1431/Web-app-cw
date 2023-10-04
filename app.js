@@ -116,4 +116,61 @@ new Vue({
     },
   },
 });
+new Vue({
+  el: "#sort3",
+  methods: {
+    order3() {
+      const mainDiv = document.getElementById("main");
+      const boxElements = Array.from(mainDiv.children);
+
+      // Extract location names and corresponding box elements
+      const locationsAndBoxes = boxElements.map((boxElement) => {
+        const contents = boxElement.textContent;
+        const locationMatch = contents.match(/Location:(.*?)Price:/);
+        return {
+          location: locationMatch ? locationMatch[1].trim() : "",
+          box: boxElement,
+        };
+      });
+
+      // Sort the box elements based on location names
+      locationsAndBoxes.sort((a, b) => a.location.localeCompare(b.location));
+
+      // Clear the main div
+      mainDiv.innerHTML = "";
+
+      // Append the sorted box elements back to the main div
+      locationsAndBoxes.forEach((item) => mainDiv.appendChild(item.box));
+    },
+  },
+});
+
+new Vue({
+  el: "#sort4",
+  methods: {
+    order4() {
+      const mainDiv = document.getElementById("main");
+      const boxElements = Array.from(mainDiv.children);
+
+      // Extract location names and corresponding box elements
+      const locationsAndBoxes = boxElements.map((boxElement) => {
+        const contents = boxElement.textContent;
+        const locationMatch = contents.match(/Location:(.*?)Price:/);
+        return {
+          location: locationMatch ? locationMatch[1].trim() : "",
+          box: boxElement,
+        };
+      });
+
+      // Sort the box elements in descending order based on location names
+      locationsAndBoxes.sort((a, b) => b.location.localeCompare(a.location));
+
+      // Clear the main div
+      mainDiv.innerHTML = "";
+
+      // Append the sorted box elements back to the main div
+      locationsAndBoxes.forEach((item) => mainDiv.appendChild(item.box));
+    },
+  },
+});
 

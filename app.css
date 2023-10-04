@@ -1,144 +1,161 @@
 #main {
-    display: flex
+  display: flex;
 }
 
 #search {
-    text-align: center
+  text-align: center;
 }
 
 #box1 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box2 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box3 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box4 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box5 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box6 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box7 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box8 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box9 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #box10 {
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: aquamarine;
-    text-align: center;
-    margin-right: 10px;
-
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  text-align: center;
+  margin-right: 10px;
 }
 
 #sort1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #sort2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #sort3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #sort4 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #sort5 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #sort6 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 .lessons-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .lessons-list {
-    display: flex; /* Display the list items in a row */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .lesson-item {
-    margin-right: 10px; /* Adjust the margin as needed to add space between lessons */
-  }
-  
-  button {
-    margin-right: 10px; /* Adjust the margin as needed */
-  }
-  .subject-container {
+  display: flex;
+  align-items: center;
+}
+
+.lessons-list {
+  display: flex;
+  /* Display the list items in a row */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lesson-item {
+  margin-right: 10px;
+  /* Adjust the margin as needed to add space between lessons */
+}
+
+button {
+  margin-right: 10px;
+  /* Adjust the margin as needed */
+}
+
+.subject-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Remove margin from the Subject tag and buttons */
+/* Add a specific class to the sorting buttons container */
+.sorting-buttons1 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  /* Add some space between Subject and buttons */
+}
+
+/* Adjust spacing as needed */
+.sorting-buttons1 button {
+  margin: 0;
+  margin-left: 5px;
+  /* Add space between the buttons */
+
+}
+.location-container {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -146,15 +163,16 @@
   
   /* Remove margin from the Subject tag and buttons */
   /* Add a specific class to the sorting buttons container */
-.sorting-buttons {
+  .sorting-buttons2 {
     display: flex;
     align-items: center;
-    margin-left: 10px; /* Add some space between Subject and buttons */
+    margin-left: 10px;
+    /* Add some space between Subject and buttons */
   }
   
   /* Adjust spacing as needed */
-  .sorting-buttons button {
+  .sorting-buttons2 button {
     margin: 0;
-    margin-left: 5px; /* Add space between the buttons */
+    margin-left: 5px;
+    /* Add space between the buttons */
   }
-  
