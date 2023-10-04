@@ -119,6 +119,24 @@
 #sort6 {
     margin-bottom: 10px;
 }
-
-     
-
+.lessons-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .lessons-list {
+    display: flex; /* Display the list items in a row */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .lesson-item {
+    margin-right: 10px; /* Adjust the margin as needed to add space between lessons */
+  }
+  
+  button {
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+  
+  

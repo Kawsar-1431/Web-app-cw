@@ -74,51 +74,108 @@ new Vue({
       "French",
       "Cooking",
     ],
-    ascending: true, // Initial sorting order
+    ascendingNames: true,
+    showNames: false,
+    sortingBy: "", // Add a property to keep track of sorting
   },
   computed: {
     sortedNames() {
-      // Create a copy of the names array and sort it
       const sorted = [...this.names];
-      sorted.sort((a, b) => {
-        if (this.ascending) {
-          return a.localeCompare(b); // Ascending order
-        } else {
-          return b.localeCompare(a); // Descending order
-        }
-      });
+      if (this.ascendingNames) {
+        sorted.sort((a, b) => a.localeCompare(b));
+      } else {
+        sorted.sort((a, b) => b.localeCompare(a));
+      }
       return sorted;
     },
   },
   methods: {
-    sortNames() {
-      this.ascending = !this.ascending; // Toggle sorting order
+    toggleNames() {
+      this.showNames = !this.showNames;
+      this.sortingBy = "names"; // Update sorting property
     },
   },
 });
+
 new Vue({
   el: "#sort3",
   data: {
     numbers: [100, 80, 70, 60, 98, 65, 97, 77, 87, 66],
-    ascending: true, // Initial sorting order
+    ascendingNumbers: true,
+    showNumbers: false,
   },
   computed: {
     sortedNumbers() {
-      // Create a copy of the numbers array and sort it
       const sorted = [...this.numbers];
-      sorted.sort((a, b) => {
-        if (this.ascending) {
-          return a - b; // Ascending order
-        } else {
-          return b - a; // Descending order
-        }
-      });
+      if (this.ascendingNumbers) {
+        sorted.sort((a, b) => a - b);
+      } else {
+        sorted.sort((a, b) => b - a);
+      }
       return sorted;
     },
   },
   methods: {
-    sortNumbers() {
-      this.ascending = !this.ascending; // Toggle sorting order
+    toggleNumbers() {
+      this.showNumbers = !this.showNumbers;
+      this.sortingBy = "numbers"; // Update sorting property
     },
   },
 });
+new Vue({
+  el: "#sort5",
+  methods: {
+    order1() {
+      const mainDiv = document.getElementById("main");
+      const boxElements = Array.from(mainDiv.children);
+      
+      // Extract subject names and corresponding box elements
+      const subjectsAndBoxes = boxElements.map(boxElement => {
+        const contents = boxElement.textContent;
+        const subjectMatch = contents.match(/Subject:(.*?)Location:/);
+        return {
+          subject: subjectMatch ? subjectMatch[1].trim() : "",
+          box: boxElement,
+        };
+      });
+
+      // Sort the box elements based on subject names
+      subjectsAndBoxes.sort((a, b) => a.subject.localeCompare(b.subject));
+
+      // Clear the main div
+      mainDiv.innerHTML = "";
+
+      // Append the sorted box elements back to the main div
+      subjectsAndBoxes.forEach(item => mainDiv.appendChild(item.box));
+    },
+  },
+});
+new Vue({
+  el: "#sort6",
+  methods: {
+    order2() {
+      const mainDiv = document.getElementById("main");
+      const boxElements = Array.from(mainDiv.children);
+
+      // Extract subject names and corresponding box elements
+      const subjectsAndBoxes = boxElements.map(boxElement => {
+        const contents = boxElement.textContent;
+        const subjectMatch = contents.match(/Subject:(.*?)Location:/);
+        return {
+          subject: subjectMatch ? subjectMatch[1].trim() : "",
+          box: boxElement,
+        };
+      });
+
+      // Sort the box elements in descending order based on subject names
+      subjectsAndBoxes.sort((a, b) => b.subject.localeCompare(a.subject));
+
+      // Clear the main div
+      mainDiv.innerHTML = "";
+
+      // Append the sorted box elements back to the main div
+      subjectsAndBoxes.forEach(item => mainDiv.appendChild(item.box));
+    },
+  },
+});
+
