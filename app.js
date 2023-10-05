@@ -1,66 +1,4 @@
 new Vue({
-  el: "#box1",
-  data: {
-    contents: "Subject:Math Location:London Price:$100 Spaces:5",
-  },
-});
-
-new Vue({
-  el: "#box2",
-  data: {
-    contents: "Subject:English Location:Oxford Price:$80 Spaces:5",
-  },
-});
-new Vue({
-  el: "#box3",
-  data: {
-    contents: "Subject:Bengali Location:Dhaka Price:$70     Spaces:5",
-  },
-});
-new Vue({
-  el: "#box4",
-  data: {
-    contents: "Subject:Physics Location:Brighton Price:$60 Spaces:5",
-  },
-});
-new Vue({
-  el: "#box5",
-  data: {
-    contents: "Subject:Music Location:Troy Price:$98 Spaces:5",
-  },
-});
-new Vue({
-  el: "#box6",
-  data: {
-    contents: "Subject:Sculpture Location:Cork Price:$65 Spaces:5",
-  },
-});
-new Vue({
-  el: "#box7",
-  data: {
-    contents: "Subject:Chemistry Location:Wales Price:$97   Spaces:5",
-  },
-});
-new Vue({
-  el: "#box8",
-  data: {
-    contents: "Subject:Biology Location:London Price:$77 Spaces:5",
-  },
-});
-new Vue({
-  el: "#box9",
-  data: {
-    contents: "Subject:French Location:London Price:$87 Spaces:5",
-  },
-});
-new Vue({
-  el: "#box10",
-  data: {
-    contents: "Subject:Cooking Location:London Price:$66 Spaces:5",
-  },
-});
-
-new Vue({
   el: "#sort1",
   methods: {
     order1() {
@@ -173,4 +111,79 @@ new Vue({
     },
   },
 });
+new Vue({
+  el: "#sort5",
+  methods: {
+    order5() {
+      const mainDiv = document.getElementById("main");
+      const boxElements = Array.from(mainDiv.children);
 
+      // Extract price values and corresponding box elements
+      const pricesAndBoxes = boxElements.map((boxElement) => {
+        const contents = boxElement.textContent;
+        const priceMatch = contents.match(/Price:(.*?)Spaces:/);
+        return {
+          price: priceMatch ? parseFloat(priceMatch[1].trim().substring(1)) : 0,
+          box: boxElement,
+        };
+      });
+
+      // Sort the box elements based on price values
+      pricesAndBoxes.sort((a, b) => a.price - b.price);
+
+      // Clear the main div
+      mainDiv.innerHTML = "";
+
+      // Append the sorted box elements back to the main div
+      pricesAndBoxes.forEach((item) => mainDiv.appendChild(item.box));
+    },
+  },
+});
+
+new Vue({
+  el: "#sort6",
+  methods: {
+    order6() {
+      const mainDiv = document.getElementById("main");
+      const boxElements = Array.from(mainDiv.children);
+
+      // Extract price values and corresponding box elements
+      const pricesAndBoxes = boxElements.map((boxElement) => {
+        const contents = boxElement.textContent;
+        const priceMatch = contents.match(/Price:(.*?)Spaces:/);
+        return {
+          price: priceMatch ? parseFloat(priceMatch[1].trim().substring(1)) : 0,
+          box: boxElement,
+        };
+      });
+
+      // Sort the box elements in descending order based on price values
+      pricesAndBoxes.sort((a, b) => b.price - a.price);
+
+      // Clear the main div
+      mainDiv.innerHTML = "";
+
+      // Append the sorted box elements back to the main div
+      pricesAndBoxes.forEach((item) => mainDiv.appendChild(item.box));
+    },
+  },
+});
+new Vue({
+  el: "#cart",
+  data: {
+    showShoppingCart: false, // Initialize the shopping cart as hidden
+  },
+  methods: {
+    toggleShoppingCart() {
+      this.showShoppingCart = !this.showShoppingCart;
+
+      // Redirect to the shopping cart page
+      if (this.showShoppingCart) {
+        window.location.href = "shopping.html";
+      } else {
+        // Redirect back to the main page
+        window.location.href = "app.html";
+      }
+    },
+  },
+});

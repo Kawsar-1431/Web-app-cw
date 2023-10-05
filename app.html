@@ -1,94 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book store</title>
-    <link rel="stylesheet" href="app.css" />
-    <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
-  </head>
 
-  <body>
-    <div id="search">
-      <input type="text" id="search" name="search" />
-      <button type="submit">Search</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book store</title>
+  <link rel="stylesheet" href="app.css" />
+  <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="search">
+    <input type="text" id="search" name="search" />
+    <button type="submit">Search</button>
+  </div>
+
+  <div id="main">
+    <div id="box1">
+      {{contents}}
+      <button id="ok" v-on:click="subject1">Add to cart</button>
     </div>
 
-    <div id="main">
-      <div id="box1">
-        {{contents}}
-        <button id="ok" v-on:click="subject1">Add to cart</button>
-      </div>
-      <div id="box2">
-        {{contents}}
-        <button v-on:click="subject2">Add to cart</button>
-      </div>
-      <div id="box3">
-        {{contents}}
-        <button v-on:click="subject3">Add to cart</button>
-      </div>
-      <div id="box4">
-        {{contents}}
-        <button v-on:click="subject4">Add to cart</button>
-      </div>
-      <div id="box5">
-        {{contents}}
-        <button v-on:click="subject5">Add to cart</button>
-      </div>
-      <div id="box6">
-        {{contents}}
-        <button v-on:click="subject6">Add to cart</button>
-      </div>
-      <div id="box7">
-        {{contents}}
-        <button v-on:click="subject7">Add to cart</button>
-      </div>
-      <div id="box8">
-        {{contents}}
-        <button v-on:click="subject8">Add to cart</button>
-      </div>
-      <div id="box9">
-        {{contents}}
-        <button v-on:click="subject9">Add to cart</button>
-      </div>
-      <div id="box10">
-        {{contents}}
-        <button v-on:click="subject10">Add to cart</button>
-      </div>
+    <div id="box2">
+      {{contents}}
+      <button v-on:click="subject2">Add to cart</button>
     </div>
-    <h2>Sort by</h2>
-    <div class="subject-container">
-      <h3>Subject</h3>
-      <div class="sorting-buttons1">
-        <div id="sort1"><button v-on:click="order1">Ascending</button></div>
-        <div id="sort2"><button v-on:click="order2">Descending</button></div>
-      </div>
-    </div>
-    <div class="location-container">
 
+    <div id="box3">
+      {{contents}}
+      <button v-on:click="subject3">Add to cart</button>
+    </div>
+
+    <div id="box4">
+      {{contents}}
+      <button v-on:click="subject4">Add to cart</button>
+    </div>
+
+    <div id="box5">
+      {{contents}}
+      <button v-on:click="subject5">Add to cart</button>
+    </div>
+
+    <div id="box6">
+      {{contents}}
+      <button v-on:click="subject6">Add to cart</button>
+    </div>
+
+    <div id="box7">
+      {{contents}}
+      <button v-on:click="subject7">Add to cart</button>
+    </div>
+
+    <div id="box8">
+      {{contents}}
+      <button v-on:click="subject8">Add to cart</button>
+    </div>
+
+    <div id="box9">
+      {{contents}}
+      <button v-on:click="subject9">Add to cart</button>
+    </div>
+
+    <div id="box10">
+      {{contents}}
+      <button v-on:click="subject10">Add to cart</button>
+    </div>
+  </div>
+
+  <h2>Sort by</h2>
+  <div class="subject-container">
+
+    <h3>Subject</h3>
+    <div class="sorting-buttons1">
+      <div id="sort1"><button v-on:click="order1">Ascending</button></div>
+      <div id="sort2"><button v-on:click="order2">Descending</button></div>
+    </div>
+  </div>
+
+  <div class="location-container">
     <h3>Location</h3>
+
     <div class="sorting-buttons2"></div>
     <div id="sort3"><button v-on:click="order3">Ascending</button></div>
     <div id="sort4"><button v-on:click="order4">Descending</button></div>
   </div>
-</div>
+  </div>
 
-    <h3>Price</h3>
+  <div class="price-container">
+     <h3>Price</h3>
+    <div class="sorting-buttons3"></div>
+    <div id="sort5"><button v-on:click="order5">Ascending</button></div>
+    <div id="sort6"><button v-on:click="order6">Descending</button></div>
+  </div>
+  </div>
 
-    <h3>Availability</h3>
+  <h3>Availability</h3>
+    
 
-    <div id="app2">
-      <div class="lessons-container">
-        <button v-on:click="toggleLessons">Lessons</button>
-        <ul v-if="showingLessons" class="lessons-list">
-          <li v-for="lesson in lessons" class="lesson-item">
-            {{ lesson.lesson }}
-          </li>
-        </ul>
-      </div>
-    </div>
+  <button id="cart" v-on:click="toggleShoppingCart">
+    {{ showShoppingCart ? 'Go Back' : 'Shopping Cart' }}
+  </button>
+ 
+  
 
-    <script src="app.js"></script>
-    <script src="lessons.js"></script>
-  </body>
+  <script src="app.js"></script>
+  <script src="lessons.js"></script>
+
+</body>
 </html>
