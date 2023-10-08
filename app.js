@@ -172,6 +172,7 @@ new Vue({
   el: "#cart",
   data: {
     showShoppingCart: false, // Initialize the shopping cart as hidden
+    
   },
   methods: {
     toggleShoppingCart() {

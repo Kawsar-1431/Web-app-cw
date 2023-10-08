@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping cart</title>
+    <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
 </head>
 <body>
+    <div id="checkout" v-if="showCart">
+        <h2>Checkout</h2>
+        <form @submit.prevent="submitOrder">
+          <label for="name">Name:</label>
+          <input type="text" id="name" v-model="checkoutData.name" @input="validateName" required>
+          <span v-if="!validName">Name must contain only letters.</span>
+          <br>
+          <label for="phone">Phone number:</label>
+          <input type="text" id="phone" v-model="checkoutData.phone" @input="validatePhone" required>
+          <span v-if="!validPhone">Phone must contain only numbers.</span>
+          <br>
+          <button id="checkout-btn" :disabled="!checkoutEnabled">Checkout</button>
+        </form>
+        <div v-if="orderSubmitted" class="order-confirmation">
+          Order has been submitted!
+        </div>
+      </div>
+    
+      <script src="app.js"></script>
+      
+    
+    
+    
     
     
 </body>
