@@ -34,7 +34,25 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "Math");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject1() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
 
 new Vue({
   el: "#box2",
@@ -44,7 +62,24 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "English");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject2() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
 
 new Vue({
   el: "#box3",
@@ -54,7 +89,25 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "Bengali");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject3() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
 
 new Vue({
   el: "#box4",
@@ -64,7 +117,26 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "Physics");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject4() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
+
 
 new Vue({
   el: "#box5",
@@ -74,7 +146,26 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "Music");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject5() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
+
 
 new Vue({
   el: "#box6",
@@ -84,7 +175,26 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "Sculpture");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject6() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
+
 
 new Vue({
   el: "#box7",
@@ -94,7 +204,26 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "Chemistry");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject7() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
+
 
 new Vue({
   el: "#box8",
@@ -104,7 +233,25 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "Biology");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject8() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
 
 new Vue({
   el: "#box9",
@@ -114,7 +261,25 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "French");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject9() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
 
 new Vue({
   el: "#box10",
@@ -124,7 +289,30 @@ new Vue({
   created() {
     parseData(this.contents);
   },
+  computed: {
+    spaces() {
+      // Get the value of "Spaces" from the parsed data
+      const item = jsonData.find((item) => item.subject === "Cooking");
+      return item ? parseInt(item.spaces) : 0;
+    },
+  },
+  methods: {
+    subject10() {
+      // Check if "Spaces" is greater than 0 before performing the action
+      if (this.spaces > 0) {
+        // Perform the action here (e.g., add to cart)
+        alert("Item added to cart");
+      }
+    },
+  },
 });
+
+
+
+
+
 
 // Now you have the data in the jsonData array
 console.log(jsonData);
+
+

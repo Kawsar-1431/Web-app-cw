@@ -11,16 +11,23 @@
 
 <body>
   <div id="search">
-    <input type="text" id="search" name="search" />
-    <button type="submit">Search</button>
-  </div>
+    <input type="text" id="searchInput" name="search" />
+    <button type="submit" onclick="search()">Search</button><br><br>
+    <div id="searchResults"></div><br>
+</div>
+
 
   <div id="main">
+
     <div id="box1">
       {{contents}}
       <button id="ok" v-on:click="subject1">Add to cart</button>
       <img src="./Icons/Math.png" width="60px">
     </div>
+
+
+
+
 
     <div id="box2">
       {{contents}}
@@ -104,12 +111,20 @@
   </div>
   </div>
 
-  <h3>Availability</h3>
+
+  <div class="space-container">
+    <h3>Space</h3>
+    <div class="sorting-buttons4"></div>
+    <div id="sort7"><button v-on:click="order7">Ascending</button></div>
+    <div id="sort8"><button v-on:click="order8">Descending</button></div>
+  </div>
+  </div>
 
 
-  <button id="cart" v-on:click="toggleShoppingCart">
+  <button id="cart" v-on:click="toggleShoppingCart" v-bind:disabled="spaces <= 0">
     {{ showShoppingCart ? 'Go Back' : 'Shopping Cart' }}
   </button>
+
 
 
 

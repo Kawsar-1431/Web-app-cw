@@ -168,6 +168,7 @@ new Vue({
     },
   },
 });
+
 new Vue({
   el: "#cart",
   data: {
@@ -187,7 +188,107 @@ new Vue({
     },
   },
 });
+new Vue({
+  el: "#sort7", // This corresponds to the "Ascending" button for sorting by Space
+  methods: {
+    order7() {
+      const mainDiv = document.getElementById("main");
+      const boxElements = Array.from(mainDiv.children);
+
+      // Extract space values and corresponding box elements
+      const spacesAndBoxes = boxElements.map((boxElement) => {
+        const contents = boxElement.textContent;
+        const spacesMatch = contents.match(/Spaces:(\d+)/);
+        return {
+          spaces: spacesMatch ? parseInt(spacesMatch[1].trim()) : 0,
+          box: boxElement,
+        };
+      });
+
+      // Sort the box elements based on space values in ascending order
+      spacesAndBoxes.sort((a, b) => a.spaces - b.spaces);
+
+      // Clear the main div
+      mainDiv.innerHTML = "";
+
+      // Append the sorted box elements back to the main div
+      spacesAndBoxes.forEach((item) => mainDiv.appendChild(item.box));
+    },
+  },
+});
+
+new Vue({
+  el: "#sort8", // This corresponds to the "Descending" button for sorting by Space
+  methods: {
+    order8() {
+      const mainDiv = document.getElementById("main");
+      const boxElements = Array.from(mainDiv.children);
+
+      // Extract space values and corresponding box elements
+      const spacesAndBoxes = boxElements.map((boxElement) => {
+        const contents = boxElement.textContent;
+        const spacesMatch = contents.match(/Spaces:(\d+)/);
+        return {
+          spaces: spacesMatch ? parseInt(spacesMatch[1].trim()) : 0,
+          box: boxElement,
+        };
+      });
+
+      // Sort the box elements based on space values in descending order
+      spacesAndBoxes.sort((a, b) => b.spaces - a.spaces);
+
+      // Clear the main div
+      mainDiv.innerHTML = "";
+
+      // Append the sorted box elements back to the main div
+      spacesAndBoxes.forEach((item) => mainDiv.appendChild(item.box));
+    },
+  },
+});
 
 function myFunction() {
   alert("Order has been submitted");
 }
+function search() {
+  // Get the search input value
+  var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+
+  // Check if the search term is "math"
+  if (searchTerm === "math" ) {
+      // Display the search result
+      document.getElementById("searchResults").innerHTML = "Subject: Math <br> Location: London";
+  } else if (searchTerm === "english" )  {
+     // Display the search result
+     document.getElementById("searchResults").innerHTML = "Subject: English <br> Location: Oxford";
+  }else if (searchTerm === "bengali")  {
+    // Display the search result
+    document.getElementById("searchResults").innerHTML = "Subject: Bengali <br> Location: Dhaka";
+}else if (searchTerm === "physics")  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = "Subject: Physics <br> Location: Brighton";
+}else if (searchTerm === "music")  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = "Subject: Music <br> Location: Troy";
+}else if (searchTerm === "sculpture")  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = "Subject: Sculpture<br>  Location: Cork";
+}else if (searchTerm === "chemistry")  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = "Subject: Chemistry <br> Location: Wales";
+}else if (searchTerm === "biology")  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = "Subject: Biology <br> Location: London";
+}else if (searchTerm === "french")  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = "Subject: French <br> Location: London";
+
+
+}else if (searchTerm === "cooking")  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = "Subject: Cooking <br> Location: London"; 
+}else {
+  // Display a message for other search terms
+  document.getElementById("searchResults").innerHTML = "No results found";
+}
+}
+
