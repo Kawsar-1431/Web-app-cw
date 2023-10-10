@@ -30,12 +30,10 @@ new Vue({
   el: "#box1",
   data: {
     contents: "Subject: Math Location:London Price:£100 Spaces:5",
-     
   },
   created() {
     parseData(this.contents);
   },
-  
 });
 
 new Vue({

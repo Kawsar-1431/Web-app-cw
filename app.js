@@ -172,7 +172,6 @@ new Vue({
   el: "#cart",
   data: {
     showShoppingCart: false, // Initialize the shopping cart as hidden
-    
   },
   methods: {
     toggleShoppingCart() {
@@ -188,3 +187,7 @@ new Vue({
     },
   },
 });
+
+function myFunction() {
+  alert("Order has been submitted");
+}
