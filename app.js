@@ -254,7 +254,55 @@ function search() {
   var searchTerm = document.getElementById("searchInput").value.toLowerCase();
 
   // Check if the search term is "math"
-  if (searchTerm === "math" ) {
+  if ( searchTerm === "a" ) {
+    document.getElementById("searchResults").innerHTML = "Subject: Math  Location: London <br> Subject: Bengali Location: Dhaka <br> Subject: Chemistry Location: Wales " ;
+
+
+  
+   } else if ( searchTerm === "b" ) {
+    document.getElementById("searchResults").innerHTML = "Subject:Bengali Location: Dhaka <br> Subject:Physics Location:Brighton <br> Subject:Biology Location:London" ;
+
+
+   
+   }else if ( searchTerm === "c" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br>  Subject:French Location:London <br> Subject:Cooking Location:London" ;
+   }else if ( searchTerm === "d" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:Bengali <br> Location:Dhaka";
+   }else if ( searchTerm === "e" ) {
+    document.getElementById("searchResults").innerHTML = "  Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br>" ; 
+   }else if ( searchTerm === "f" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:English Location:Oxford <br> Subject:French Location:London" ;
+   }else if ( searchTerm === "g" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton <br> Subject:Biology Location:London <br> Subject:Cooking Location:London";
+   }else if ( searchTerm === "h" ) {
+    document.getElementById("searchResults").innerHTML = " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton <br> Subject:French Location:London";
+   }else if ( searchTerm === "i" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton <br> Subject:Music Location:Troy <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London <br> Subject:Cooking Location:London";
+   }else if ( searchTerm === "k" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:Sculpture Location:Cork <br> Subject:Cooking Location:London";
+   }else if ( searchTerm === "l" ) {
+    document.getElementById("searchResults").innerHTML = " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Sculpture Location:Cork  <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London <br> Subject:French Location:London <br> Subject:Cooking Location:London";
+   }else if ( searchTerm === "m" ) {
+    document.getElementById("searchResults").innerHTML = " Subject: Math Location:London <br> Subject:Music Location:Troy <br> Subject:Chemistry Location:Wales" ;
+   }else if ( searchTerm === "n" ) {
+    document.getElementById("searchResults").innerHTML = " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton <br> Subject:Biology Location:London <br> Subject:French Location:London <br> Subject:Cooking Location:London";
+   }else if ( searchTerm === "0" ) {
+    document.getElementById("searchResults").innerHTML = " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Physics Location:Brighton <br> Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Biology Location:London <br> Subject:French Location:London <br> Subject:Cooking Location:London";
+   }else if ( searchTerm === "p" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:Physics Location:Brighton <br> Subject:Sculpture Location:Cork";
+   }else if ( searchTerm === "r" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:English Location:Oxford <br> Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br> Subject:French Location:London";
+   }else if ( searchTerm === "s" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:Physics Location:Brighton <br> Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales"; 
+   }else if ( searchTerm === "t" ) {
+    document.getElementById("searchResults").innerHTML = " Subject: Math Location:London <br> Subject:Physics Location:Brighton <br> Subject:Music Location:Troy <br>  Subject:Chemistry Location:Wales";
+   }else if ( searchTerm === "u" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork";
+   }else if ( searchTerm === "w" ) {
+      document.getElementById("searchResults").innerHTML = "Subject:Chemistry <br> Location:Wales";
+   }else if ( searchTerm === "x" ) {
+    document.getElementById("searchResults").innerHTML = " Subject:English Location:Oxford";
+   }else if (searchTerm === "math" ) {
       // Display the search result
       document.getElementById("searchResults").innerHTML = "Subject: Math <br> Location: London";
   } else if (searchTerm === "english" )  {
@@ -286,7 +334,16 @@ function search() {
 }else if (searchTerm === "cooking")  {
   // Display the search result
   document.getElementById("searchResults").innerHTML = "Subject: Cooking <br> Location: London"; 
-}else {
+}else if (searchTerm === "50")  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton";
+}else if (searchTerm === "60" )  {
+  // Display the search result
+  document.getElementById("searchResults").innerHTML = " Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London <br>  Subject:Cooking Location:London";
+}else if (searchTerm === "90" )  {
+    // Display the search result
+    document.getElementById("searchResults").innerHTML = " Subject:French <br> Location:London";
+  }else {
   // Display a message for other search terms
   document.getElementById("searchResults").innerHTML = "No results found";
 }
