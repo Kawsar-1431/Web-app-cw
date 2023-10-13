@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "Math",
+      "price": 50,
+      "available": 5,
+      "location": "London"
+    },
+    {
+      "id": 2,
+      "name": "English",
+      "price": 50,
+      "available": 5,
+      "location": "Oxford"
+    },
+    {
+      "id": 3,
+      "name": "Bengali",
+      "price": 50,
+      "available": 5,
+      "location": "Dhaka"
+    },
+    {
+      "id": 4,
+      "name": "Physics",
+      "price": 50,
+      "available": 5,
+      "location": "Brighton"
+    },
+    {
+      "id": 5,
+      "name": "Music",
+      "price": 60,
+      "available": 5,
+      "location": "Troy"
+    },
+    {
+      "id": 6,
+      "name": "Sculpture",
+      "price": 60,
+      "available": 5,
+      "location": "Cork"
+    },
+    {
+      "id": 7,
+      "name": "Chemistry",
+      "price": 60,
+      "available": 5,
+      "location": "Wales"
+    },
+    {
+      "id": 8,
+      "name": "Biology",
+      "price": 60,
+      "available": 5,
+      "location": "London"
+    },
+    {
+      "id": 9,
+      "name": "French",
+      "price": 90,
+      "available": 5,
+      "location": "London"
+    },
+    {
+      "id": 10,
+      "name": "Cooking",
+      "price": 90,
+      "available": 5,
+      "location": "London"
+    }
+  ]
+  

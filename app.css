@@ -1,94 +1,10 @@
-#main {
-  display: flex;
-}
-
 #search {
   text-align: center;
 }
 
-#box1 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box2 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box3 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box4 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box5 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box6 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box7 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box8 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box9 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
-#box10 {
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: aquamarine;
-  text-align: center;
-  margin-right: 10px;
-}
-
 #sort1 {
   margin-bottom: 10px;
-  
+
 }
 
 #sort2 {
@@ -97,7 +13,7 @@
 
 #sort3 {
   margin-bottom: 10px;
-  
+
 }
 
 #sort4 {
@@ -130,7 +46,7 @@ button {
   display: flex;
   align-items: center;
   margin-left: 10px;
-  
+
   /* Add some space between Subject and buttons */
 }
 
@@ -138,94 +54,118 @@ button {
 .sorting-buttons1 button {
   margin: 0;
   margin-left: 5px;
-  
+
   /* Add space between the buttons */
 
 }
+
 .location-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    
-  }
-  
-  /* Remove margin from the Subject tag and buttons */
-  /* Add a specific class to the sorting buttons container */
-  .sorting-buttons2 {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    
-    /* Add some space between Subject and buttons */
-    
-  }
-  
-  /* Adjust spacing as needed */
-  .sorting-buttons2 button {
-    margin: 0;
-    margin-left: 5px;
-    background-color: reds;
-    
-   /* Add space between the buttons */
- }
-  .price-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    
-  }
-  
-  /* Remove margin from the Subject tag and buttons */
-  /* Add a specific class to the sorting buttons container */
-  .sorting-buttons3 {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    
-    /* Add some space between Subject and buttons */
-    
-    
-  }
-  
-  /* Adjust spacing as needed */
-  .sorting-buttons3 button {
-    margin: 0;
-    margin-left: 5px;
-    
-    /* Add space between the buttons */
-    
-  }
-  .space-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  /* Remove margin from the Subject tag and buttons */
-  /* Add a specific class to the sorting buttons container */
-  .sorting-buttons4 {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    /* Add some space between Subject and buttons */
-  }
-  
-  /* Adjust spacing as needed */
-  .sorting-buttons4 button {
-    margin: 0;
-    margin-left: 5px;
-    /* Add space between the buttons */
-    
-  }
-  /* Style for the disabled button */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+/* Remove margin from the Subject tag and buttons */
+/* Add a specific class to the sorting buttons container */
+.sorting-buttons2 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+  /* Add some space between Subject and buttons */
+
+}
+
+/* Adjust spacing as needed */
+.sorting-buttons2 button {
+  margin: 0;
+  margin-left: 5px;
+  background-color: reds;
+
+  /* Add space between the buttons */
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+/* Remove margin from the Subject tag and buttons */
+/* Add a specific class to the sorting buttons container */
+.sorting-buttons3 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+  /* Add some space between Subject and buttons */
+
+
+}
+
+/* Adjust spacing as needed */
+.sorting-buttons3 button {
+  margin: 0;
+  margin-left: 5px;
+
+  /* Add space between the buttons */
+
+}
+
+.space-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Remove margin from the Subject tag and buttons */
+/* Add a specific class to the sorting buttons container */
+.sorting-buttons4 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  /* Add some space between Subject and buttons */
+}
+
+/* Adjust spacing as needed */
+.sorting-buttons4 button {
+  margin: 0;
+  margin-left: 5px;
+  /* Add space between the buttons */
+
+}
+
+/* Style for the disabled button */
 .disabled-button {
-  opacity: 0.5; /* Reduce opacity to indicate it's disabled */
-  cursor: not-allowed; /* Change cursor to not-allowed */
-}
-#cart {
-  background-color: red;
+  opacity: 0.5;
+  /* Reduce opacity to indicate it's disabled */
+  cursor: not-allowed;
+  /* Change cursor to not-allowed */
 }
 
 
-  
-  
+.cart-item {
+  margin-bottom: 10px;
+}
+
+#products {
+  display: flex;
+
+}
+
+.product {
+  background-color: aquamarine;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center the content horizontally */
+}
+
+.product button {
+  margin-top: 10px;
+}

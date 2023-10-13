@@ -10,106 +10,96 @@
 </head>
 
 <body>
-  <div id="search">
-    <input type="text" id="searchInput" name="search" />
-    <button type="submit" onclick="search()">Search</button><br><br>
-    <div id="searchResults"></div><br>
-</div>
-
-
-  <div id="main">
-
-    <div id="box1">
-      {{contents}}
-      <button id="ok" v-on:click="subject1">Add to cart</button>
-      <img src="./Icons/Math.png" width="60px">
+  <div id="app">
+    <div id="search">
+      <input type="text" id="searchInput" name="search" />
+      <button type="submit" onclick="search()">Search</button><br><br>
+      <div id="searchResults"></div><br>
     </div>
 
 
 
 
 
-    <div id="box2">
-      {{contents}}
-      <button v-on:click="subject2">Add to cart</button>
-      <img src="./Icons/English.png" width="60px">
+
+    <div id="products">
+      <div class="product" v-for="product in products" :key="product.id">
+        <div class="product-details"></div>
+        Subject: {{ product.name }}
+        Location: {{ product.location }}
+        Price: £{{ product.price }}
+        Available: {{ product.available }}
+
+        <button v-on:click="addToCart(product)" :disabled="product.available === 0">Add to Cart</button><br><br>
+      </div>
+
+    </div><br>
+    <div id="cart" v-if="showCart">
+      <h2>Shopping Cart</h2>
+      <ul>
+        <li v-for="(quantity, productId) in cart" :key="productId" class="cart-item">
+          {{ products.find(product => product.id === parseInt(productId)).name }} - £{{ products.find(product =>
+          product.id === parseInt(productId)).price }} (Quantity: {{ quantity }})
+          <button @click="removeFromCart(productId)">Remove</button>
+        </li>
+      </ul>
+
+      <form v-if="Object.keys(cart).length > 0">
+        <label for="name">Name:</label>
+        <input type="text" id="name" v-model="checkoutData.name" @input="validateName" required
+          oninput="this.value = this.value.replace(/[^a-z.]/g, '').replace(/(\..*)\./g, '$1');" /><br><br>
+
+        <label for="phone">Phone number:</label>
+        <input type="number" id="phoneNum" v-model="checkoutData.phone" @input="validatePhone" required
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /><br><br>
+
+        <button id="place-order-button" @click="placeOrder" :disabled="!isFormValid">Place Order</button><br><br>
+      </form>
     </div>
 
-    <div id="box3">
-      {{contents}}
-      <button v-on:click="subject3">Add to cart</button>
-      <img src="./Icons/Bengali.png" width="60">
+    <button @click="toggleCart" :disabled="Object.values(cart).reduce((acc, curr) => acc + curr, 0) === 0">
+      Show Cart
+      <span v-if="Object.values(cart).reduce((acc, curr) => acc + curr, 0) !== 0">
+        ({{ Object.values(cart).reduce((acc, curr) => acc + curr, 0) }})
+      </span>
+    </button>
+
+
+
+
+
+    <h2>Sort by</h2>
+
+    <div class="subject-container">
+
+      <h3>Subject</h3>
+      <div class="sorting-buttons1">
+        <div id="sort1"><button v-on:click="order1">Ascending</button></div>
+        <div id="sort2"><button v-on:click="order2">Descending</button></div>
+      </div>
     </div>
 
-    <div id="box4">
-      {{contents}}
-      <button v-on:click="subject4">Add to cart</button>
-      <img src="./Icons/Physics.png" width="60px">
-    </div>
 
-    <div id="box5">
-      {{contents}}
-      <button v-on:click="subject5">Add to cart</button>
-      <img src="./Icons/Music.png" width="60px">
-    </div>
 
-    <div id="box6">
-      {{contents}}
-      <button v-on:click="subject6">Add to cart</button>
-      <img src="./Icons/Sculpture.png" width="60px">
-    </div>
 
-    <div id="box7">
-      {{contents}}
-      <button v-on:click="subject7">Add to cart</button>
-      <img src="./Icons/Chemistry.png" width="60px">
-    </div>
 
-    <div id="box8">
-      {{contents}}
-      <button v-on:click="subject8">Add to cart</button>
-      <img src="./Icons/Biology.png" width="60px">
-    </div>
 
-    <div id="box9">
-      {{contents}}
-      <button v-on:click="subject9">Add to cart</button>
-      <img src="./Icons/French.png" width="60px">
+    <div class="price-container">
+      <h3>Price</h3>
+      <div class="sorting-buttons3">
+        <div id="sort5"><button v-on:click="order5">Ascending</button></div>
+        <div id="sort6"><button v-on:click="order6">Descending</button></div>
+      </div>
     </div>
+    <div class="location-container">
+      <h3>Location</h3>
 
-    <div id="box10">
-      {{contents}}
-      <button v-on:click="subject10">Add to cart</button>
-      <img src="./Icons/Food.png" width="60px">
+      <div class="sorting-buttons2"></div>
+      <div id="sort3"><button v-on:click="order3">Ascending</button></div>
+      <div id="sort4"><button v-on:click="order4">Descending</button></div>
     </div>
   </div>
 
-  <h2>Sort by</h2>
-  <div class="subject-container">
-
-    <h3>Subject</h3>
-    <div class="sorting-buttons1">
-      <div id="sort1"><button v-on:click="order1">Ascending</button></div>
-      <div id="sort2"><button v-on:click="order2">Descending</button></div>
-    </div>
-  </div>
-
-  <div class="location-container">
-    <h3>Location</h3>
-
-    <div class="sorting-buttons2"></div>
-    <div id="sort3"><button v-on:click="order3">Ascending</button></div>
-    <div id="sort4"><button v-on:click="order4">Descending</button></div>
-  </div>
-  </div>
-
-  <div class="price-container">
-    <h3>Price</h3>
-    <div class="sorting-buttons3"></div>
-    <div id="sort5"><button v-on:click="order5">Ascending</button></div>
-    <div id="sort6"><button v-on:click="order6">Descending</button></div>
-  </div>
-  </div>
 
 
   <div class="space-container">
@@ -118,18 +108,34 @@
     <div id="sort7"><button v-on:click="order7">Ascending</button></div>
     <div id="sort8"><button v-on:click="order8">Descending</button></div>
   </div>
+
   </div>
 
 
-  <button id="cart" v-on:click="toggleShoppingCart" v-bind:disabled="spaces <= 0">
-    {{ showShoppingCart ? 'Go Back' : 'Shopping Cart' }}
-  </button>
 
 
 
 
-  <script src="app.js"></script>
-  <script src="lessons.js"></script>
+  <script>
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+<script src="app.js"></script>
+<script src="lessons.js"></script>
 
 </body>
 
