@@ -23,7 +23,7 @@
 
 
     <div id="products">
-      <div class="product" v-for="product in products" :key="product.id">
+      <div class="product" v-for="product in sortedProductsBySpace" :key="product.id">
         <div class="product-details">
          
         </div>
@@ -105,24 +105,25 @@
   </div>
 
 
-
   <div class="space-container">
     <h3>Space</h3>
-    <div class="sorting-buttons4"></div>
-    <div id="sort7"><button v-on:click="order7">Ascending</button></div>
-    <div id="sort8"><button v-on:click="order8">Descending</button></div>
+    <div class="sorting-buttons4">
+      <div id="sort7">
+        <button v-on:click="toggleOrderBySpace">Rearrange</button>
+      </div>
+    </div>
   </div>
-
-  </div>
-
-
-
-
+  
+  
+  
+  
 
 
-  <script>
 
-  </script>
+
+
+
+  
 
 
 
@@ -139,7 +140,7 @@
 
 
 <script src="app.js"></script>
-<script src="lessons.js"></script>
+
 
 </body>
 

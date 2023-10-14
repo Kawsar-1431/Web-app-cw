@@ -10,6 +10,7 @@ new Vue({
     },
     validName: true,
     validPhone: true,
+    orderBySpace: 'ascending', // Initialize the sorting order
   },
   created() {
     fetch('products.json')
@@ -21,6 +22,13 @@ new Vue({
   computed: {
     isFormValid() {
       return this.validName && this.validPhone && this.checkoutData.name && this.checkoutData.phone;
+    },
+    sortedProductsBySpace() {
+      if (this.orderBySpace === 'ascending') {
+        return this.products.slice().sort((a, b) => a.available - b.available);
+      } else {
+        return this.products.slice().sort((a, b) => b.available - a.available);
+      }
     },
   },
   methods: {
@@ -76,24 +84,18 @@ new Vue({
     order6() {
       this.products.sort((a, b) => b.price - a.price);
     },
-    order7() {
-      this.products.sort((a, b) => a.available - b.available);
-    },
-    order8() {
-      this.products.sort((a, b) => b.available - a.available);
-    },
-    watch: {
-  products: {
-    handler() {
-      this.order7(); // Sort in ascending order when available space changes
-    },
-    deep: true,
-  },
-},
-  },
-  
-});
+   
 
+    toggleOrderBySpace() {
+      // Toggle the sorting order when clicking the button
+      if (this.orderBySpace === 'ascending') {
+        this.orderBySpace = 'descending';
+      } else {
+        this.orderBySpace = 'ascending';
+      }
+    },
+  },
+});
 
 function search() {
   // Get the search input value
