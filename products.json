@@ -12,7 +12,7 @@
     {
       "id": 2,
       "name": "English",
-      "price": 50,
+      "price": 70,
       "available": 5,
       "location": "Oxford",
       "imageUrl": "./Icons/English.png"
@@ -38,7 +38,7 @@
       "name": "Music",
       "price": 60,
       "available": 5,
-      "location": "Troy",
+      "location": "Brussels",
       "imageUrl": "./Icons/Music.png"
     },
     {
@@ -46,7 +46,7 @@
       "name": "Sculpture",
       "price": 60,
       "available": 5,
-      "location": "Cork",
+      "location": "Lahore",
       "imageUrl": "./Icons/Sculpture.png"
     },
     {
@@ -54,7 +54,7 @@
       "name": "Chemistry",
       "price": 60,
       "available": 5,
-      "location": "Wales",
+      "location": "Melbourne",
       "imageUrl": "./Icons/Chemistry.png"
     },
     {

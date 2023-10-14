@@ -158,12 +158,13 @@ button {
 .product {
   background-color: aquamarine;
   border: 1px solid #ccc;
-  padding: 5px; /* Reduce padding to decrease box height */
-  margin: 5px; /* Reduce margin to decrease spacing between boxes */
+  padding: 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Center the content horizontally */
+  box-sizing: content-box; /* Set box sizing to content-box */
+  /* Other styling properties you have can stay the same */
 }
 
 .product button {

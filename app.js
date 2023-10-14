@@ -208,15 +208,20 @@ function search() {
   } else if (searchTerm === "50") {
     // Display the search result
     document.getElementById("searchResults").innerHTML =
-      " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton";
+      " Subject: Math Location:London <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton";
   } else if (searchTerm === "60") {
     // Display the search result
     document.getElementById("searchResults").innerHTML =
       " Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London ";
+    } else if (searchTerm === "70") {
+      // Display the search result
+      document.getElementById("searchResults").innerHTML =
+        " Subject:French Location:London <br>  Subject:English Location:Oxford";
   } else if (searchTerm === "90") {
     // Display the search result
     document.getElementById("searchResults").innerHTML =
       " Subject:French Location:London <br>  Subject:Cooking Location:London";
+      
   } else {
     // Display a message for other search terms
     document.getElementById("searchResults").innerHTML = "No results found";
