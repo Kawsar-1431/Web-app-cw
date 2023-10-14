@@ -4,70 +4,82 @@
       "name": "Math",
       "price": 50,
       "available": 5,
-      "location": "London"
+      "location": "London",
+      "imageUrl": "./Icons/Math.png"
+      
+      
     },
     {
       "id": 2,
       "name": "English",
       "price": 50,
       "available": 5,
-      "location": "Oxford"
+      "location": "Oxford",
+      "imageUrl": "./Icons/English.png"
     },
     {
       "id": 3,
       "name": "Bengali",
       "price": 50,
       "available": 5,
-      "location": "Dhaka"
+      "location": "Dhaka",
+      "imageUrl": "./Icons/Bengali.png"
     },
     {
       "id": 4,
       "name": "Physics",
       "price": 50,
       "available": 5,
-      "location": "Brighton"
+      "location": "Brighton",
+      "imageUrl": "./Icons/Physics.png"
     },
     {
       "id": 5,
       "name": "Music",
       "price": 60,
       "available": 5,
-      "location": "Troy"
+      "location": "Troy",
+      "imageUrl": "./Icons/Music.png"
     },
     {
       "id": 6,
       "name": "Sculpture",
       "price": 60,
       "available": 5,
-      "location": "Cork"
+      "location": "Cork",
+      "imageUrl": "./Icons/Sculpture.png"
     },
     {
       "id": 7,
       "name": "Chemistry",
       "price": 60,
       "available": 5,
-      "location": "Wales"
+      "location": "Wales",
+      "imageUrl": "./Icons/Chemistry.png"
     },
     {
       "id": 8,
       "name": "Biology",
       "price": 60,
       "available": 5,
-      "location": "London"
+      "location": "London",
+      "imageUrl": "./Icons/Biology.png"
     },
     {
       "id": 9,
       "name": "French",
       "price": 90,
       "available": 5,
-      "location": "London"
+      "location": "London",
+      "imageUrl": "./Icons/French.png"
     },
     {
       "id": 10,
       "name": "Cooking",
       "price": 90,
       "available": 5,
-      "location": "London"
+      "location": "London",
+      "imageUrl": "./Icons/Food.png"
     }
   ]
   

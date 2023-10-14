@@ -93,25 +93,7 @@ new Vue({
   },
   
 });
-new Vue({
-  el: "#cart",
-  data: {
-    showShoppingCart: false, // Initialize the shopping cart as hidden
-  },
-  methods: {
-    toggleShoppingCart() {
-      this.showShoppingCart = !this.showShoppingCart;
 
-      // Redirect to the shopping cart page
-      if (this.showShoppingCart) {
-        window.location.href = "shopping.html";
-      } else {
-        // Redirect back to the main page
-        window.location.href = "app.html";
-      }
-    },
-  },
-});
 
 function search() {
   // Get the search input value
