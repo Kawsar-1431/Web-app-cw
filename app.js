@@ -1,30 +1,35 @@
 new Vue({
-  el: '#app',
+  el: "#app",
   data: {
     products: [],
     cart: {},
     showCart: false,
     checkoutData: {
-      name: '',
-      phone: '',
+      name: "",
+      phone: "",
     },
     validName: true,
     validPhone: true,
-    orderBySpace: 'ascending', // Initialize the sorting order
+    orderBySpace: "ascending", // Initialize the sorting order
   },
   created() {
-    fetch('products.json')
-      .then(response => response.json())
-      .then(data => {
+    fetch("products.json")
+      .then((response) => response.json())
+      .then((data) => {
         this.products = data;
       });
   },
   computed: {
     isFormValid() {
-      return this.validName && this.validPhone && this.checkoutData.name && this.checkoutData.phone;
+      return (
+        this.validName &&
+        this.validPhone &&
+        this.checkoutData.name &&
+        this.checkoutData.phone
+      );
     },
     sortedProductsBySpace() {
-      if (this.orderBySpace === 'ascending') {
+      if (this.orderBySpace === "ascending") {
         return this.products.slice().sort((a, b) => a.available - b.available);
       } else {
         return this.products.slice().sort((a, b) => b.available - a.available);
@@ -45,7 +50,7 @@ new Vue({
     removeFromCart(productId) {
       if (this.cart[productId] > 0) {
         this.cart[productId] -= 1;
-        const product = this.products.find(p => p.id === parseInt(productId));
+        const product = this.products.find((p) => p.id === parseInt(productId));
         product.available += 1;
         if (this.cart[productId] === 0) {
           delete this.cart[productId];
@@ -62,9 +67,9 @@ new Vue({
       this.validPhone = true; // You can add validation logic for the phone field here
     },
     placeOrder() {
-      alert('Order has been submitted.');
-      this.checkoutData.name = '';
-      this.checkoutData.phone = '';
+      alert("Order has been submitted.");
+      this.checkoutData.name = "";
+      this.checkoutData.phone = "";
     },
     order1() {
       this.products.sort((a, b) => a.name.localeCompare(b.name));
@@ -84,18 +89,19 @@ new Vue({
     order6() {
       this.products.sort((a, b) => b.price - a.price);
     },
-   
 
     toggleOrderBySpace() {
       // Toggle the sorting order when clicking the button
-      if (this.orderBySpace === 'ascending') {
-        this.orderBySpace = 'descending';
+      if (this.orderBySpace === "ascending") {
+        this.orderBySpace = "descending";
       } else {
-        this.orderBySpace = 'ascending';
+        this.orderBySpace = "ascending";
       }
     },
   },
 });
+
+
 
 function search() {
   // Get the search input value
@@ -213,15 +219,14 @@ function search() {
     // Display the search result
     document.getElementById("searchResults").innerHTML =
       " Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London ";
-    } else if (searchTerm === "70") {
-      // Display the search result
-      document.getElementById("searchResults").innerHTML =
-        " Subject:French Location:London <br>  Subject:English Location:Oxford";
+  } else if (searchTerm === "70") {
+    // Display the search result
+    document.getElementById("searchResults").innerHTML =
+      " Subject:French Location:London <br>  Subject:English Location:Oxford";
   } else if (searchTerm === "90") {
     // Display the search result
     document.getElementById("searchResults").innerHTML =
       " Subject:French Location:London <br>  Subject:Cooking Location:London";
-      
   } else {
     // Display a message for other search terms
     document.getElementById("searchResults").innerHTML = "No results found";

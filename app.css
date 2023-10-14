@@ -1,33 +1,9 @@
 #search {
   text-align: center;
 }
-
-#sort1 {
-  margin-bottom: 10px;
-
+#display {
+  background-color: brown;
 }
-
-#sort2 {
-  margin-bottom: 10px;
-}
-
-#sort3 {
-  margin-bottom: 10px;
-
-}
-
-#sort4 {
-  margin-bottom: 10px;
-}
-
-#sort5 {
-  margin-bottom: 10px;
-}
-
-#sort6 {
-  margin-bottom: 10px;
-}
-
 
 button {
   margin-right: 10px;
@@ -35,8 +11,11 @@ button {
 }
 
 .subject-container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+ 
+  background-color: blueviolet;
+  margin-right: 10px;
   margin-bottom: 10px;
 }
 
@@ -56,14 +35,13 @@ button {
   margin-left: 5px;
 
   /* Add space between the buttons */
-
 }
 
 .location-container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 10px;
-
+  margin-right: 10px;
+  background-color: blueviolet;
 }
 
 /* Remove margin from the Subject tag and buttons */
@@ -74,23 +52,22 @@ button {
   margin-left: 10px;
 
   /* Add some space between Subject and buttons */
-
 }
 
 /* Adjust spacing as needed */
 .sorting-buttons2 button {
   margin: 0;
   margin-left: 5px;
-  background-color: reds;
 
   /* Add space between the buttons */
 }
 
 .price-container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  margin-right: 10px;
+  background-color: blueviolet;
   margin-bottom: 10px;
-
 }
 
 /* Remove margin from the Subject tag and buttons */
@@ -101,8 +78,6 @@ button {
   margin-left: 10px;
 
   /* Add some space between Subject and buttons */
-
-
 }
 
 /* Adjust spacing as needed */
@@ -111,13 +86,13 @@ button {
   margin-left: 5px;
 
   /* Add space between the buttons */
-
 }
 
 .space-container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: blueviolet;
 }
 
 /* Remove margin from the Subject tag and buttons */
@@ -134,7 +109,6 @@ button {
   margin: 0;
   margin-left: 5px;
   /* Add space between the buttons */
-
 }
 
 /* Style for the disabled button */
@@ -145,14 +119,12 @@ button {
   /* Change cursor to not-allowed */
 }
 
-
 .cart-item {
   margin-bottom: 10px;
 }
 
 #products {
   display: flex;
-
 }
 
 .product {
@@ -163,7 +135,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: content-box; /* Set box sizing to content-box */
+  box-sizing: content-box;
+  /* Set box sizing to content-box */
   /* Other styling properties you have can stay the same */
 }
 
