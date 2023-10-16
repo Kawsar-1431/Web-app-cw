@@ -14,7 +14,7 @@ button {
   display: inline-flex;
   align-items: center;
  
-  background-color: blueviolet;
+  background-color: aquamarine;
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -41,7 +41,7 @@ button {
   display: inline-flex;
   align-items: center;
   margin-right: 10px;
-  background-color: blueviolet;
+  background-color: aquamarine;
 }
 
 /* Remove margin from the Subject tag and buttons */
@@ -66,7 +66,7 @@ button {
   display: inline-flex;
   align-items: center;
   margin-right: 10px;
-  background-color: blueviolet;
+  background-color: aquamarine;
   margin-bottom: 10px;
 }
 
@@ -92,7 +92,7 @@ button {
   display: inline-flex;
   align-items: center;
   margin-right: 10px;
-  background-color: blueviolet;
+  background-color: aquamarine;
 }
 
 /* Remove margin from the Subject tag and buttons */
@@ -129,7 +129,7 @@ button {
 
 .product {
   background-color: aquamarine;
-  border: 1px solid #ccc;
+  
   padding: 10px;
   margin: 10px;
   display: flex;
@@ -142,4 +142,28 @@ button {
 
 .product button {
   margin-top: 10px;
+}
+#remove {
+  background-color: red;
+  
+}
+#shoppingCart{
+  text-align: center;
+}
+#cart1 {
+  background-color: aquamarine;
+  
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  flex-direction: column;
+  
+  
+  
+}
+#app {
+  background-color:darkolivegreen
+}
+#showCart{
+  background-color: lightskyblue;
 }
