@@ -161,9 +161,31 @@ button {
   
   
 }
-#app {
-  background-color:darkolivegreen
-}
+
 #showCart{
   background-color: lightskyblue;
 }
+
+body {
+  background-color: darkolivegreen;
+}
+/* Add this to your existing CSS or create a new CSS file if needed */
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Push the button to the right */
+  padding: 10px; /* Add some padding for spacing */
+}
+
+#showCart {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+
+

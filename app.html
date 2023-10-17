@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head id="head">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book store</title>
@@ -10,25 +10,41 @@
 </head>
 
 <body>
+  
+  
   <div id="app">
-    <div id="search">
+    <header>
+      <div class="button-container">
+      <button id="showCart" v-on:click="toggleCart" :disabled="Object.values(cart).reduce((acc, curr) => acc + curr, 0) === 0">
+        View Cart
+        <span v-if="Object.values(cart).reduce((acc, curr) => acc + curr, 0) !== 0">
+          ({{ Object.values(cart).reduce((acc, curr) => acc + curr, 0) }})
+        </span>
+      </button>
+      </div>
+    </header>
+    
+
+
+
+
+    <div id="search" v-show="!showCart">
       <input type="text" id="searchInput" name="search" />
       <button type="submit" onclick="search()">Search</button><br><br>
       <div id="searchResults"></div><br>
     </div>
+    
 
 
 
 
-
-
-    <div id="products">
+    <div id="products" v-show="!showCart">
       <div class="product" v-for="product in sortedProductsBySpace" :key="product.id">
         <div class="product-details">
          
         </div>
         Subject: {{ product.name }}
-        Location: {{ product.location }}
+        Location: {{ product.location }}<br>
         Price: £{{ product.price }}
         Available: {{ product.available }}
   
@@ -38,46 +54,17 @@
       </div>
 
     </div><br>
-    <div id="cart" v-if="showCart">
-      <h2 id="shoppingCart">Shopping Cart</h2>
-      
-        <ul id= "cart1" v-for="(quantity, productId) in cart" :key="productId" class="cart-item">
-          Subject:{{ products.find(product => product.id === parseInt(productId)).name }}<br>  Location: {{ products.find(product => product.id === parseInt(productId)).location }} <!-- Display location -->
-           <br>Price:{{ products.find(product =>
-          product.id === parseInt(productId)).price }}£ <br> Quantity: {{ quantity }}
-         
-         <br> <button id="remove" v-on:click="removeFromCart(productId)">Remove</button>
-           </ul><br><br>
-      
-
-      <form v-if="Object.keys(cart).length > 0">
-        <label for="name"><b>Name:</b></label>
-        <input type="text" id="name" v-model="checkoutData.name" @input="validateName" required
-          oninput="this.value = this.value.replace(/[^a-z.]/g, '').replace(/(\..*)\./g, '$1');" /><br><br>
-
-        <label for="phone"><b>Phone number:</b></label>
-        <input type="number" id="phoneNum" v-model="checkoutData.phone" @input="validatePhone" required
-          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /><br><br>
-
-        <button id="place-order-button" v-on:click="placeOrder" :disabled="!isFormValid">Place Order</button><br><br>
-      </form>
-    </div>
-
-    <button id="showCart" v-on:click="toggleCart" :disabled="Object.values(cart).reduce((acc, curr) => acc + curr, 0) === 0">
-      Show Cart
-      <span v-if="Object.values(cart).reduce((acc, curr) => acc + curr, 0) !== 0">
-        ({{ Object.values(cart).reduce((acc, curr) => acc + curr, 0) }})
-      </span>
-    </button>
-
-
-
-
-
-    <h2 >Sort:</h2>
+    
     
 
-    <div class="subject-container">
+
+
+
+
+    <h2 v-show="!showCart" >Sort:</h2>
+    
+
+    <div class="subject-container" v-show="!showCart">
 
       <h3>Subject→</h3>
       <div class="sorting-buttons1"></div>
@@ -91,14 +78,14 @@
 
 
 
-    <div class="price-container">
+    <div class="price-container" v-show="!showCart">
       <h3>Price→</h3>
       <div class="sorting-buttons3"></div>
         <div id="sort5"><button v-on:click="order5">Ascending</button></div>
         <div id="sort6"><button v-on:click="order6">Descending</button></div>
       
     </div>
-    <div class="location-container">
+    <div class="location-container" v-show="!showCart">
       <h3>Location→</h3>
 
       <div class="sorting-buttons2"></div>
@@ -108,15 +95,41 @@
   </div>
 
 
-  <div class="space-container">
+  <div class="space-container" v-show="!showCart">
     <h3>Space→</h3>
     <div class="sorting-buttons4"></div>
       <div id="sort7">
         <button v-on:click="toggleOrderBySpace">Rearrange</button>
       </div>
+
+      
       
     
-  </div>
+  </div><br><br><br>
+  <div id="cart" v-if="showCart">
+      
+      
+    <ul id= "cart1" v-for="(quantity, productId) in cart" :key="productId" class="cart-item">
+      Subject:{{ products.find(product => product.id === parseInt(productId)).name }}<br>  Location: {{ products.find(product => product.id === parseInt(productId)).location }} <!-- Display location -->
+       <br>Price:£{{ products.find(product =>
+      product.id === parseInt(productId)).price }}<br> Quantity: {{ quantity }}
+     
+     <br> <button id="remove" v-on:click="removeFromCart(productId)">Remove</button>
+       </ul><br><br>
+  
+
+  <form v-if="Object.keys(cart).length > 0">
+    <label for="name"><b>Name:</b></label>
+    <input type="text" id="name" v-model="checkoutData.name" @input="validateName" required
+      oninput="this.value = this.value.replace(/[^a-z.]/g, '').replace(/(\..*)\./g, '$1');" /><br><br>
+
+    <label for="phone"><b>Phone number:</b></label>
+    <input type="number" id="phoneNum" v-model="checkoutData.phone" @input="validatePhone" required
+      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /><br><br>
+
+    <button id="place-order-button" v-on:click="placeOrder" :disabled="!isFormValid">Place Order</button><br><br>
+  </form>
+</div>
   
   
   

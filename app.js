@@ -55,8 +55,13 @@ new Vue({
         if (this.cart[productId] === 0) {
           delete this.cart[productId];
         }
+        if (Object.keys(this.cart).length === 0) {
+          this.showCart = false; // Hide the cart when it becomes empty
+        }
       }
     },
+    
+    
     toggleCart() {
       this.showCart = !this.showCart;
     },
@@ -98,8 +103,16 @@ new Vue({
         this.orderBySpace = "ascending";
       }
     },
+
+   toggleCart: function () {
+      this.showCart = !this.showCart;
+    },
   },
 });
+
+
+
+
 
 
 
@@ -232,3 +245,4 @@ function search() {
     document.getElementById("searchResults").innerHTML = "No results found";
   }
 }
+
