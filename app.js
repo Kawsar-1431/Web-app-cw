@@ -119,130 +119,61 @@ new Vue({
 function search() {
   // Get the search input value
   var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+  var searchResults = document.getElementById("searchResults");
 
-  // Check if the search term is "math"
-  if (searchTerm === "a") {
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Math  Location: London <br> Subject: Bengali Location: Dhaka <br> Subject: Chemistry Location: Wales ";
-  } else if (searchTerm === "b") {
-    document.getElementById("searchResults").innerHTML =
-      "Subject:Bengali Location: Dhaka <br> Subject:Physics Location:Brighton <br> Subject:Biology Location:London";
-  } else if (searchTerm === "c") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br>  Subject:French Location:London <br> Subject:Cooking Location:London";
-  } else if (searchTerm === "d") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:Bengali <br> Location:Dhaka";
-  } else if (searchTerm === "e") {
-    document.getElementById("searchResults").innerHTML =
-      "  Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br>";
-  } else if (searchTerm === "f") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:English Location:Oxford <br> Subject:French Location:London";
-  } else if (searchTerm === "g") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton <br> Subject:Biology Location:London <br> Subject:Cooking Location:London";
-  } else if (searchTerm === "h") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton <br> Subject:French Location:London";
-  } else if (searchTerm === "i") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton <br> Subject:Music Location:Troy <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London <br> Subject:Cooking Location:London";
-  } else if (searchTerm === "k") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:Sculpture Location:Cork <br> Subject:Cooking Location:London";
-  } else if (searchTerm === "l") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Sculpture Location:Cork  <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London <br> Subject:French Location:London <br> Subject:Cooking Location:London";
-  } else if (searchTerm === "m") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject: Math Location:London <br> Subject:Music Location:Troy <br> Subject:Chemistry Location:Wales";
-  } else if (searchTerm === "n") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton <br> Subject:Biology Location:London <br> Subject:French Location:London <br> Subject:Cooking Location:London";
-  } else if (searchTerm === "0") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject: Math Location:London <br> Subject:English Location:Oxford <br> Subject:Physics Location:Brighton <br> Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Biology Location:London <br> Subject:French Location:London <br> Subject:Cooking Location:London";
-  } else if (searchTerm === "p") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:Physics Location:Brighton <br> Subject:Sculpture Location:Cork";
-  } else if (searchTerm === "r") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:English Location:Oxford <br> Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br> Subject:French Location:London";
-  } else if (searchTerm === "s") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:Physics Location:Brighton <br> Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales";
-  } else if (searchTerm === "t") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject: Math Location:London <br> Subject:Physics Location:Brighton <br> Subject:Music Location:Troy <br>  Subject:Chemistry Location:Wales";
-  } else if (searchTerm === "u") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork";
-  } else if (searchTerm === "w") {
-    document.getElementById("searchResults").innerHTML =
-      "Subject:Chemistry <br> Location:Wales";
-  } else if (searchTerm === "x") {
-    document.getElementById("searchResults").innerHTML =
-      " Subject:English Location:Oxford";
-  } else if (searchTerm === "math") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Math <br> Location: London";
-  } else if (searchTerm === "english") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: English <br> Location: Oxford";
-  } else if (searchTerm === "bengali") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Bengali <br> Location: Dhaka";
-  } else if (searchTerm === "physics") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Physics <br> Location: Brighton";
-  } else if (searchTerm === "music") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Music <br> Location: Troy";
-  } else if (searchTerm === "sculpture") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Sculpture<br>  Location: Cork";
-  } else if (searchTerm === "chemistry") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Chemistry <br> Location: Wales";
-  } else if (searchTerm === "biology") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Biology <br> Location: London";
-  } else if (searchTerm === "french") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: French <br> Location: London";
-  } else if (searchTerm === "cooking") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      "Subject: Cooking <br> Location: London";
-  } else if (searchTerm === "50") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      " Subject: Math Location:London <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton";
-  } else if (searchTerm === "60") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      " Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London ";
-  } else if (searchTerm === "70") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      " Subject:French Location:London <br>  Subject:English Location:Oxford";
-  } else if (searchTerm === "90") {
-    // Display the search result
-    document.getElementById("searchResults").innerHTML =
-      " Subject:French Location:London <br>  Subject:Cooking Location:London";
+  // Define a map or object to store search results
+  var searchResultData = {
+    "a": "Subject: Math  Location: London <br> Subject: Bengali Location: Dhaka <br> Subject: Chemistry Location: Wales",
+    "b": "Subject: Bengali Location: Dhaka <br> Subject: Physics Location: Brighton <br> Subject: Biology Location: London",
+    "c": "Subject: Sculpture Location: Cork <br> Subject: Chemistry Location: Wales <br> Subject: French Location: London <br> Subject: Cooking Location: London",
+    "d": "Subject: Bengali <br> Location: Dhaka",
+    "e": "Subject: English Location: Oxford <br> Subject: Bengali Location: Dhaka <br> Subject: Sculpture Location: Cork <br> Subject: Chemistry Location: Wales",
+    "f": "Subject: English Location: Oxford <br> Subject: French Location: London",
+    "g": "Subject: English Location: Oxford <br> Subject: Bengali Location: Dhaka <br> Subject: Physics Location: Brighton <br> Subject: Biology Location: London <br> Subject: Cooking Location: London",
+    "h": "Subject: Math Location: London <br> Subject: English Location: Oxford <br> Subject: Bengali Location: Dhaka <br> Subject: Physics Location: Brighton <br> Subject: French Location: London",
+    "i": "Subject: English Location: Oxford <br> Subject: Bengali Location: Dhaka <br> Subject: Physics Location: Brighton <br> Subject: Music Location: Troy <br> Subject: Chemistry Location: Wales <br> Subject: Biology Location: London <br> Subject: Cooking Location: London",
+    "k": "Subject: Sculpture Location: Cork <br> Subject: Cooking Location: London",
+    "l": "Subject: Math Location: London <br> Subject: English Location: Oxford <br> Subject: Bengali Location: Dhaka <br> Subject: Sculpture Location: Cork  <br> Subject: Chemistry Location: Wales <br> Subject: Biology Location: London <br> Subject: French Location: London <br> Subject: Cooking Location: London",
+    "m": "Subject: Math Location: London <br> Subject: Music Location: Troy <br> Subject: Chemistry Location: Wales",
+    "n": "Subject: Math Location: London <br> Subject: English Location: Oxford <br> Subject: Bengali Location: Dhaka <br> Subject: Physics Location: Brighton <br> Subject: Biology Location: London <br> Subject: French Location: London <br> Subject: Cooking Location: London",
+    "0": "Subject: Math Location: London <br> Subject: English Location: Oxford <br> Subject: Physics Location: Brighton <br> Subject: Music Location: Troy <br> Subject: Sculpture Location: Cork <br> Subject: Biology Location: London <br> Subject: French Location: London <br> Subject: Cooking Location: London",
+    "p": "Subject: Physics Location: Brighton <br> Subject: Sculpture Location: Cork",
+    "r": "Subject: English Location: Oxford <br> Subject: Music Location: Troy <br> Subject: Sculpture Location: Cork <br> Subject: Chemistry Location: Wales <br> Subject: French Location: London",
+    "s": "Subject: Physics Location: Brighton <br> Subject: Music Location: Troy <br> Subject: Sculpture Location: Cork <br> Subject: Chemistry Location: Wales",
+    "t": "Subject: Math Location: London <br> Subject: Physics Location: Brighton <br> Subject: Music Location: Troy <br> Subject: Chemistry Location: Wales",
+    "u": "Subject: Music Location: Troy <br> Subject: Sculpture Location: Cork",
+    "w": "Subject: Chemistry <br> Location: Wales",
+    "x": "Subject: English Location: Oxford",
+    "math": "Subject: Math <br> Location: London",
+    "english": "Subject: English <br> Location: Oxford",
+    "bengali": "Subject: Bengali <br> Location: Dhaka",
+    "physics": "Subject: Physics <br> Location: Brighton",
+    "music": "Subject: Music <br> Location: Troy",
+    "sculpture": "Subject: Sculpture<br>  Location: Cork",
+    "chemistry": "Subject: Chemistry <br> Location: Melbourne",
+    "biology": "Subject: Biology <br> Location: London",
+    "french":  "Subject: French <br> Location: London",
+    "cooking":  "Subject: Cooking <br> Location: London",
+    "50":     " Subject: Math Location:London <br> Subject:Bengali Location:Dhaka <br> Subject:Physics Location:Brighton",
+    "60":  " Subject:Music Location:Troy <br> Subject:Sculpture Location:Cork <br> Subject:Chemistry Location:Wales <br> Subject:Biology Location:London ",
+    "70" : "Subject:French Location:London <br>  Subject:English Location:Oxford",
+    "90":  " Subject:French Location:London <br>  Subject:Cooking Location:London",
+  };
+
+  if (searchTerm === searchResults.getAttribute('data-search-term')) {
+    // If the search term matches the one in the results, clear the results and input field
+    searchResults.innerHTML = "";
+    document.getElementById("searchInput").value = "";
+    searchResults.removeAttribute('data-search-term');
   } else {
-    // Display a message for other search terms
-    document.getElementById("searchResults").innerHTML = "No results found";
+    // Check if the search term is in the searchResultData object
+    if (searchResultData.hasOwnProperty(searchTerm)) {
+      // Display the search result
+      searchResults.innerHTML = searchResultData[searchTerm];
+      searchResults.setAttribute('data-search-term', searchTerm);
+    } else {
+      searchResults.innerHTML = "No results found";
+      searchResults.setAttribute('data-search-term', searchTerm);
+    }
   }
 }
-

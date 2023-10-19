@@ -114,7 +114,9 @@
        <br>Price:£{{ products.find(product =>
       product.id === parseInt(productId)).price }}<br> Quantity: {{ quantity }}
      
-     <br> <button id="remove" v-on:click="removeFromCart(productId)">Remove</button>
+     <br> 
+     <img :src="products.find(product => product.id === parseInt(productId)).imageUrl" alt="Product Image" width="40px" /><br>
+     <button id="remove" v-on:click="removeFromCart(productId)">Remove</button>
        </ul><br><br>
   
 
