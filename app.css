@@ -1,40 +1,40 @@
 #search {
   text-align: center;
 }
+
 #display {
   background-color: brown;
 }
 
 button {
   margin-right: 10px;
-  /* Adjust the margin as needed */
+  
 }
 
 .subject-container {
   display: inline-flex;
   align-items: center;
- 
+
   background-color: aquamarine;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-/* Remove margin from the Subject tag and buttons */
-/* Add a specific class to the sorting buttons container */
+
 .sorting-buttons1 {
   display: flex;
   align-items: center;
   margin-left: 10px;
 
-  /* Add some space between Subject and buttons */
+  
 }
 
-/* Adjust spacing as needed */
+
 .sorting-buttons1 button {
   margin: 0;
   margin-left: 5px;
 
-  /* Add space between the buttons */
+
 }
 
 .location-container {
@@ -44,22 +44,21 @@ button {
   background-color: aquamarine;
 }
 
-/* Remove margin from the Subject tag and buttons */
-/* Add a specific class to the sorting buttons container */
+
 .sorting-buttons2 {
   display: flex;
   align-items: center;
   margin-left: 10px;
 
-  /* Add some space between Subject and buttons */
+  
 }
 
-/* Adjust spacing as needed */
+
 .sorting-buttons2 button {
   margin: 0;
   margin-left: 5px;
 
-  /* Add space between the buttons */
+  
 }
 
 .price-container {
@@ -70,22 +69,21 @@ button {
   margin-bottom: 10px;
 }
 
-/* Remove margin from the Subject tag and buttons */
-/* Add a specific class to the sorting buttons container */
+
 .sorting-buttons3 {
   display: flex;
   align-items: center;
   margin-left: 10px;
 
-  /* Add some space between Subject and buttons */
+  
 }
 
-/* Adjust spacing as needed */
+
 .sorting-buttons3 button {
   margin: 0;
   margin-left: 5px;
 
-  /* Add space between the buttons */
+  
 }
 
 .space-container {
@@ -95,28 +93,26 @@ button {
   background-color: aquamarine;
 }
 
-/* Remove margin from the Subject tag and buttons */
-/* Add a specific class to the sorting buttons container */
+
 .sorting-buttons4 {
   display: flex;
   align-items: center;
   margin-left: 10px;
-  /* Add some space between Subject and buttons */
+  
 }
 
-/* Adjust spacing as needed */
+
 .sorting-buttons4 button {
   margin: 0;
-  margin-left: 5px;
-  /* Add space between the buttons */
+  margin-right: 10px;
+  
 }
 
-/* Style for the disabled button */
+
 .disabled-button {
-  opacity: 0.5;
-  /* Reduce opacity to indicate it's disabled */
-  cursor: not-allowed;
-  /* Change cursor to not-allowed */
+opacity: 0.5;
+cursor: not-allowed;
+  
 }
 
 .cart-item {
@@ -129,51 +125,55 @@ button {
 
 .product {
   background-color: aquamarine;
-  
+
   padding: 10px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: content-box;
-  /* Set box sizing to content-box */
-  /* Other styling properties you have can stay the same */
+  
 }
 
 .product button {
   margin-top: 10px;
 }
+
 #remove {
   background-color: red;
-  
+
 }
-#shoppingCart{
+
+#shoppingCart {
   text-align: center;
 }
+
 #cart1 {
   background-color: aquamarine;
-  
+
   padding: 10px;
   margin: 10px;
   display: inline-block;
   flex-direction: column;
-  
-  
-  
+
+
+
 }
 
-#showCart{
+#showCart {
   background-color: lightskyblue;
 }
 
 body {
   background-color: darkolivegreen;
 }
-/* Add this to your existing CSS or create a new CSS file if needed */
+
+
 .button-container {
   display: flex;
-  justify-content: flex-end; /* Push the button to the right */
-  padding: 10px; /* Add some padding for spacing */
+  justify-content: flex-end;
+  padding: 10px;
+  
 }
 
 #showCart {
@@ -184,8 +184,3 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
-
-
-
-
-
