@@ -70,10 +70,10 @@ new Vue({
       this.showCart = !this.showCart;
     },
     validateName() {
-      this.validName = true; 
+      this.validName = true;
     },
     validatePhone() {
-      this.validPhone = true; 
+      this.validPhone = true;
     },
     placeOrder() {
       alert("Order has been submitted.");
@@ -113,7 +113,6 @@ new Vue({
     },
   },
 });
-
 
 function search() {
   // Get the search input value
@@ -176,5 +175,3 @@ function search() {
     }
   }
 }
-
-
