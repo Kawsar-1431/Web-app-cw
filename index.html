@@ -34,7 +34,7 @@
       <!-- Search section -->
       <div id="search" v-show="!showCart">
         <input type="text" id="searchInput" name="search" />
-        <button type="submit" onclick="search()">Search</button><br /><br />
+        <button type="submit" onclick="search()">Search</button><br/><br/>
         <div id="searchResults"></div>
         <br />
       </div>
@@ -53,12 +53,10 @@
           Price: £{{ product.price }} Available: {{ product.available }}
 
           <!-- Button to add product to the cart -->
-          <button
-            v-on:click="addToCart(product)"
-            :disabled="product.available === 0"
-          >
-            Add to Cart</button
-          ><br />
+          <button v-on:click="product.available > 0 ? addToCart(product) : null">
+            Add to Cart
+          </button>
+        <br />
           <img :src="product.imageUrl" alt="Product Image" width="40px" />
         </div>
       </div>
@@ -115,7 +113,7 @@
           parseInt(productId)).name }}<br />
           Location: {{ products.find(product => product.id ===
           parseInt(productId)).location }}
-          <!-- Display location -->
+        
           <br />Price:£{{ products.find(product => product.id ===
           parseInt(productId)).price }}<br />
           Quantity: {{ quantity }}
@@ -162,7 +160,7 @@
       </div>
     </div>
 
-    <!-- Include an external JavaScript file -->
+    
     <script src="app.js"></script>
   </body>
 </html>

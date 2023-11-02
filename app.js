@@ -69,6 +69,7 @@ new Vue({
     toggleCart() {
       this.showCart = !this.showCart;
     },
+    
     validateName() {
       this.validName = true;
     },
