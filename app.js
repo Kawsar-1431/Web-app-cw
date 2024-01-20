@@ -7,6 +7,10 @@ new Vue({
     checkoutData: {
       name: "",
       phone: "",
+      imagesBaseURL: "https://mobile-app-jv52.onrender.com/",
+      serverBaseURL: "https://mobile-app-jv52.onrender.com/",
+      testConsole: true,
+      showTestConsole: true,
     },
     validName: true,
     validPhone: true,
