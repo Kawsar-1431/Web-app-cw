@@ -162,6 +162,22 @@
    
     
     <script src="app.js"></script>
+    <script>
+      function getData() {
+        fetch('https://mobile-app-jv52.onrender.com/lessons') // Replace with your actual Render backend URL
+          .then(response => response.json())
+          .then(data => {
+            console.log('Data from server:', data);
+            // Now you can use the data received from the server in your Vue.js application
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+      }
+
+      getData()
+    </script>
+    
     
   </body>
 </html>
