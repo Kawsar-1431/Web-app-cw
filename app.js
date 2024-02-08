@@ -4,25 +4,8 @@ new Vue({
     products: [],
   },
   methods: {
-    // Fetch data from the server and update the products array
-    getData() {
-      fetch("https://mobile-app-jv52.onrender.com/lessons")
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Data from server:", data);
-          // Map the data and update the products array
-          this.products = data.map((product) => ({
-            ...product,
-            quantity: product.available,
-          }));
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-        });
-    },
-
     // Fetch all lessons from the server and update the products array
-    fetchAllLessons() {
+    fetchLessons() {
       fetch("https://mobile-app-jv52.onrender.com/lessons")
         .then((response) => {
           if (!response.ok) {
@@ -46,8 +29,7 @@ new Vue({
     },
   },
   created() {
-    // On component creation, fetch data and all lessons
-    this.getData();
-    this.fetchAllLessons();
+    // On component creation, fetch all lessons
+    this.fetchLessons();
   },
 });
