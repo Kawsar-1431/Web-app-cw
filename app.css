@@ -1,26 +1,186 @@
+#search {
+  text-align: center;
+}
+
+#display {
+  background-color: brown;
+}
+
+button {
+  margin-right: 10px;
+
+}
+
+.subject-container {
+  display: inline-flex;
+  align-items: center;
+
+  background-color: aquamarine;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+.sorting-buttons1 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+
+}
+
+
+.sorting-buttons1 button {
+  margin: 0;
+  margin-left: 5px;
+
+
+}
+
+.location-container {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  background-color: aquamarine;
+}
+
+
+.sorting-buttons2 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+
+}
+
+
+.sorting-buttons2 button {
+  margin: 0;
+  margin-left: 5px;
+
+
+}
+
+.price-container {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  background-color: aquamarine;
+  margin-bottom: 10px;
+}
+
+
+.sorting-buttons3 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+
+}
+
+
+.sorting-buttons3 button {
+  margin: 0;
+  margin-left: 5px;
+
+
+}
+
+.space-container {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  background-color: aquamarine;
+}
+
+
+.sorting-buttons4 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+
+}
+
+
+.sorting-buttons4 button {
+  margin: 0;
+  margin-right: 10px;
+
+}
+
+
+.disabled-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+
+}
+
+.cart-item {
+  margin-bottom: 10px;
+}
+
 #products {
   display: flex;
 }
 
 .product {
-  background-color: brown;
+  background-color: aquamarine;
+
   padding: 10px;
-  margin:
-    10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: content-box;
+
+}
+
+.product button {
+  margin-top: 10px;
+}
+
+#remove {
+  background-color: red;
+
+}
+
+#shoppingCart {
+  text-align: center;
+}
+
+#cart1 {
+  background-color: aquamarine;
+
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  flex-direction: column;
+
+
+
+}
+
+#showCart {
+  background-color: lightskyblue;
+}
+
+body {
+  background-color: darkolivegreen;
 }
 
 
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
 
+}
 
-
-
-
-
-
-body {
-  background-color: grey;
+#showCart {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
